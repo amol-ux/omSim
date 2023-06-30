@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./Semantic-UI-CSS-master/semantic.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/Semantic-UI-CSS-master/semantic.min.js"></script>
+    <script src="/script.js"></script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="main">
+            <header>
+                <div class="header">
+                    <h1>Inventory Management</h1>
+                </div>
+            </header>
+            <main>
+                <div class="intro sections">
+                    <div class="ui stackable two column grid">
+                        <div class="column">
+                            <h2 class="intro-heading">Introduction</h2>
+                            <div class="content">
+                                <p>You are the store manager at a local branch of DigiLife,
+                                    a large electronics retail chain. A new version of a
+                                    popular consumer electronics device called the Amulet
+                                    is coming out this year. It is your job to sell as many
+                                    Amulets as you can while minimizing your costs in order
+                                    to maximize your store's profits.</p>
+                                <p>The simulation will start after you place the first order
+                                    and can be paused at any time. You will be able to run
+                                    the simulation three times. Your score will be calculated
+                                    based on how well you do relative to your goal.</p>
+                                <p><strong>Your Goal: </strong></p>
+                                <p>Earn $1,000,000 in net profits of Amulet sales.</p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="imageWrapper">
+                                <img src="/assets/image1.png" alt="">
+                            </div>
+                            <div>
+                                <p class="bgblue">The simulation will take approximately
+                                    <strong>25-45 minutes</strong> to complete and can be
+                                    paused at any time.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <div class="sections">
+                    <div class="continueWrapper">
+                        <a href="#step1" class="continue-btn">Continue >></a>
+                    </div>
+                    <div class="step" id="step1">
+                        <div class="ui stackable two column grid">
+                            <div class="column">
+                                <h2>Step 1: Review Documents</h2>
+                                <div class="content">
+                                    <p>First, you will need to go through your incoming docu-
+                                        ments, email, texts and voice messages in order to
+                                        familiarize yourself with the scenario specifics. Read
+                                        these items carefully since they contain clues on how to
+                                        best understand and solve problems. Be sure to check
+                                        new information, which is indicated with an red alert.</p>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="imageWrapper">
+                                    <img src="/assets/image2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="sections">
+                    <div class="continueWrapper">
+                        <a href="#step2" class="continue-btn" >Continue >></a>
+                    </div>
+                    <div class="step" id="step2">
+                        <div class="ui stackable two column grid">
+                            <div class="column">
+                                <h2>Step 2: Make a Decision</h2>
+                                <div class="content">
+                                    <p>Next, you will be asked to place your first order.
+                                        Make sure you review all of your materials so that
+                                        you can make the best decisions. You will be asked
+                                        to make additional ordering decisions that will
+                                        impact your revenue and costs over the course of
+                                        the simulation.</p>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="imageWrapper">
+                                    <img src="/assets/image3.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="sections">
+                    <div class="continueWrapper">
+                        <a class="continue-btn" href="#step3">Continue >></a>
+                    </div>
+                    <div id="step3" class="step">
+                        <div class="ui stackable two column grid">
+                            <div class="column">
+                                <h2>Step 3: Track Costs and Revenues</h2>
+                                <div class="content">
+                                    <p>As the simulation begins running, each 'day' takes
+                                        approximately 1 seconds. Your revenue and costs
+                                        will be charted in the bar chart on the top while
+                                        your inventory and demand will be charted in the
+                                        bar chart on the bottom. You will need to monitor
+                                        these to then inform making additional ordering
+                                        decisions.</p>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="imageWrapper">
+                                    <img src="/assets/image4.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="sections">
+                    <div class="continueWrapper">
+                        <a class="continue-btn" href="#cardSec">Continue >></a>
+                    </div>
+                    <div class="bggray" id="cardSec">
+                        <div class="keysToSucess">
+                            <div style="padding-top: 20px;">
+                                <h2 class="card-heading">Keys to Success</h2>
+                            </div>
+                            <div class="cardWrapper">
+                                <div class="ui card">
+                                    <div>
+                                        <div class="header center aligned">
+                                            <h3>Stay Informed</h3>
+                                        </div>
+                                    </div>
+                                    <div class="content center aligned">
+                                        Your decisions are only as
+                                        good as the information they
+                                        are based on. Pay attention
+                                        to indicators and read new
+                                        messages as they come in.
+                                    </div>
+                                </div>
+
+                                <div class="ui card">
+                                    <div>
+                                        <div class="header center aligned">
+                                            <h3>Be adaptable</h3>
+                                        </div>
+                                    </div>
+                                    <div class="content center aligned">
+                                        This simulation puts the
+                                        course concepts into a
+                                        real-world context where
+                                        circumstances are changing.
+                                        Don't be afraid to make
+                                        decisions when necessary.
+                                    </div>
+                                </div>
+
+                                <div class="ui card">
+                                    <div>
+                                        <div class="header center aligned">
+                                            <h3>Be Patient</h3>
+                                        </div>
+                                    </div>
+                                    <div class="content center aligned">
+                                        Sometimes the best course
+                                        of action is to see how your
+                                        decisions play out over
+                                        longer time periods.
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sections">
+                    <div>
+                        <div class="simulationBtnWrapper">
+                            <div>
+                                <button class="sumStart">Go to Simulation</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div class="footer">
+                    <p>Copyright &#169;2023 Pearson Education&nbsp; | &nbsp;Privacy Policy</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
