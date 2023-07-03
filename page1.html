@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="/Semantic-UI-CSS-master/semantic.min.js"></script>
     <script src="/script.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 
 <body>
@@ -23,24 +23,24 @@
                     </div>
                     <div class="sideicons">
                         <div class="menuicons">
-                            <div class="xlImage">
+                            <div class="xl_image">
                                 <img src="./assets/xl.png" alt="">
                             </div>
-                            <div class="menuImage">
+                            <div class="menu_image">
                                 <img src="./assets/menu.png" alt="">
                             </div>
-                            <div class="mailImage">
+                            <div class="mail_image">
                                 <img src="./assets/mail.png" alt="">
                             </div>
-                            <div class="callImage">
+                            <div class="call_image">
                                 <img src="./assets/call.png" alt="">
                             </div>
-                            <div class="msgImage">
+                            <div class="msg_image">
                                 <img src="./assets/message.png" alt="">
                             </div>
                         </div>
                         <div class="infoicon">
-                            <div class="aboutImage">
+                            <div class="about_image">
                                 <img src="/assets/about.png" alt="">
                             </div>
                         </div>
@@ -50,8 +50,8 @@
             </header>
             <main>
                 <div class="intro sections">
-                    <div class="headerWrapper">
-                        <div class="page-heading bgpurple">
+                    <div class="_header">
+                        <div class="page_heading bgpurple">
                             <h2>Simulation</h2>
                         </div>
                         <div class="infotext">
@@ -60,10 +60,10 @@
                                 holding costs. However, smaller orders mean more frequent re-ordering costs.</p>
                         </div>
                     </div>
-                    <div class="placeOrderWrapper p1">
+                    <div class="place_order_wrapper p1">
                         <div>
-                            <div class="placeOrder">
-                                <div class="itemTable">
+                            <div class="place_order">
+                                <div class="item_table">
                                     <table>
                                         <thead>
                                             <tr>
@@ -77,7 +77,7 @@
                                             <tr>
                                                 <td>Amulet 1.0</td>
                                                 <td class="center aligned">
-                                                    <input type="text" id="QtyInput" value="50">
+                                                    <input type="number" id="qty_input" value="50">
                                                 </td>
                                                 <td class="center aligned">$95/unit</td>
                                                 <td class="center aligned">$4750</td>
@@ -86,11 +86,11 @@
                                                 <td>Shipping</td>
                                                 <td colspan="2">
                                                     <div class="radio1">
-                                                        <input type="radio" id="normal" name="normal" id="">
+                                                        <input type="radio" id="normal" name="shipping" id="">
                                                         <label for="normal">Normal (5 days)</label>
                                                     </div>
                                                     <div class="radio2">
-                                                        <input type="radio" id="expedite" name="expedite" id="">
+                                                        <input type="radio" id="expedite" name="shipping" id="">
                                                         <label for="expedite">Expedite (1 days)</label>
                                                     </div>
                                                 </td>
@@ -107,8 +107,8 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <div class="orderHistory">
-                                    <table>
+                                <div class="order_history_container">
+                                    <!-- <table>
                                         <thead>
                                             <tr>
                                                 <th colspan="4">Order History</th>
@@ -119,63 +119,97 @@
                                                 <td colspan="2" class="center aligned">-</td>
                                                 <td colspan="2" class="center aligned">-</td>
                                             </tr>
-                                            <!-- <tr>
+                                           <tr>
                                                 <td>
                                                     <button>Place Order</button>
                                                 </td>
-                                            </tr> -->
+                                            </tr>
 
                                         </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="progressWrapperParent">
-                            <div class="progressWrapper">
-                                <div class="pauseSumBtn">
-                                    <button class="pauseSum ui button">Pause Simulation</button>
-                                </div>
-                                <div class="timeProgressWrapper">
-                                    <div class="remainTime">
-                                        <i class="clock icon"></i>
-                                        <span>Jan 29(48 weeks remaining)</span>
+                                    </table> -->
+                                    <div class="order_history">
+                                        <div class="ord_heading">
+                                            <p>Order History</p>
+                                        </div>
+                                        <div>
+                                            <div class="ord_history_list">
+                                                <div class="ord_items">
+                                                    <span class="date">Feb 05</span>
+                                                    <span class="qty">(400)</span>
+                                                </div>
+                                                <div class="ord_items">
+                                                    <span class="date">Jan 25</span>
+                                                    <span class="qty">(800)</span>
+                                                </div>
+                                                <div class="ord_items">
+                                                    <span class="date">Jan 12</span>
+                                                    <span class="qty">(500000)</span>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="place_order_btn">
+                                                <button id="placeOrderButton" class="place_order_button ui button">Place Order</button>
+                                            </div>
+                                        </div>
                                     </div>
+                                </div>
+
+                            </div>
+                            <div class="progress_parent">
+                                <div class="_progress">
+                                    <div class="pause_sum_btn">
+                                        <button id="pauseSumButton" class="pause_sum_button pause_sum ui button">Pause Simulation</button>
+                                    </div>
+                                    <div class="time_progress">
+                                        <div class="remain_time">
+                                            <!-- <i class="fa-light fa-clock" style="color: #666f6e;"></i> -->
+                                            <!-- <i class="fa-solid fa-clock"></i> -->
+                                            <img src="/assets/time.png" alt="">
+                                            <span>Jan 29(48 weeks remaining)</span>
+                                        </div>
+                                        <div class="progress">
+                                            <!-- <progress id="time" value="32" max="100"> 32% </progress> -->
+                                            <div class="background" id="time">
+                                                <div class="progress_fg" style="width: 20%;"></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="profit_loss">
+                            <div class="units_sold">
+                                <p class="pl_header">Total Units Sold</p>
+                                <p class="us_content bld">1,118</p>
+                            </div>
+                            <div class="tot_revenue">
+                                <p class="pl_header">Total Revenue</p>
+                                <p class="tr_content bld">$223,600</p>
+                            </div>
+                            <div class="tot_costs">
+                                <p class="pl_header">Total Costs</p>
+                                <p class="tc_content bld">$178,606</p>
+                            </div>
+                            <div class="pl_progress">
+                                <div>
+                                    <p class="pl_header">Profit/Loss</p>
+                                    <p class="pl_amt">$44,993</p>
                                     <div class="progress">
-                                        <progress id="time" value="32" max="100"> 32% </progress>
+                                        <!-- <progress id="profitLoss" value="32" max="100"> 32% </progress> -->
+                                        <div class="background" id="profitLoss">
+                                            <div class="progress_fg" style="width: 20%;"></div>
+                                        </div>
                                     </div>
+                                    <p class="goal_amt">Goal: $1,000,000</p>
                                 </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="profitLossWrapper">
-                        <div class="unitsSold">
-                            <p class="plHeader">Total Units Sold</p>
-                            <p class="plContent bld">1,118</p>
-                        </div>
-                        <div class="totRevenue">
-                            <p class="plHeader">Total Revenue</p>
-                            <p class="trContent bld">$223,600</p>
-                        </div>
-                        <div class="unitsSold">
-                            <p class="plHeader">Total Costs</p>
-                            <p class="usContent bld">$178,606</p>
-                        </div>
-                        <div class="plWrapper">
-                            <div>
-                                <p class="plHeader">Profit/Loss</p>
-                                <p class="plAmt">$44,993</p>
-                                <div class="progress">
-                                    <progress id="profitLoss" value="32" max="100"> 32% </progress>
-                                </div>
-                                <p class="goalAmt">Goal: $1,000,000</p>
                             </div>
                         </div>
                     </div>
-                    <hr>
-                </div>
 
 
             </main>

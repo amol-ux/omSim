@@ -34,7 +34,7 @@ header .header {
 /* Header style end */
 
 /* main section style start */
-.headerWrapper {
+._header{
     padding: 0 1rem;
     padding-top: 1rem;
 }
@@ -70,7 +70,7 @@ header .header {
 }
 
 .intro-heading,
-.page-heading {
+.page_heading {
     color: #B2347B;
     margin-bottom: 5px;
 }
@@ -235,12 +235,12 @@ header .header {
 
 
 /* page2 */
-.itemTable td {
+.item_table td {
     /* padding: 5px !important; */
     padding: 5px 10px !important;
 }
 
-.itemTable td:first-child {
+.item_table td:first-child {
     padding-left: 0px !important;
 }
 
@@ -254,7 +254,7 @@ header .header {
     margin: 6px;
 }
 
-#QtyInput {
+#qty_input {
     background-color: #666666;
     width: 60px;
     border-radius: 8px;
@@ -264,7 +264,7 @@ header .header {
     padding: 5px;
 }
 
-.placeOrder th {
+.place_order th {
     padding: 0 0 2px 0 !important;
 }
 
@@ -272,13 +272,13 @@ td p {
     margin: 4px;
 }
 
-.placeOrderWrapper,
-.placeOrder {
+.place_order_wrapper,
+.place_order {
     display: flex;
 }
 
-.placeOrderWrapper {
-    margin: 20px;
+.place_order_wrapper {
+    margin: 30px 20px 22px 20px;
     font-size: 15px;
 }
 
@@ -286,55 +286,114 @@ td p {
     padding: 0 1rem;
 }
 
-.orderHistory {
+.order_history_container {
     margin-left: 10px;
-    border-left: 1px solid rgba(0, 0, 0, .1);
+    /* border-left: 1px solid rgba(0, 0, 0, .1);
     border-right: 1px solid rgba(0, 0, 0, .1);
-    padding: 0 35px;
-
+    padding: 0 18px; */
+    min-width: 170px;
+    min-height: 122px;
+    position: relative;
+    /* overflow-y: scroll; */
 }
 
-.pauseSum {
-    background-color: #B3B3B3;
+.order_history {
+    height: 122px;
+    border-left: 1px solid rgba(0, 0, 0, .1);
+    border-right: 1px solid rgba(0, 0, 0, .1);
+    padding: 0 18px;
+}
+
+.order_history>div>* {
+    padding: 0 8px;
+}
+
+.pause_sum_button {
+    border-radius: 30px !important;
+    padding: .58571429em 1.5em .58571429em !important;
+}
+.pause_sum{
+    background-color: #B3B3B3 !important;
+    color: #eeeeee !important;
+}
+.play_sum{
+    background-color: #B03681 !important;
+    color: white !important;
+}
+.qty{
+    margin-left: 8px;
+}
+.place_order_button {
     border-radius: 30px !important;
     color: #EEEEEE !important;
-    padding: .58571429em 1.5em .58571429em !important;
+    padding: 0.58571429em 1em 0.58571429em !important;
+    background-color: #B03681 !important;
+    color: white !important;
+    width: 105px;
+}
+
+.place_order_btn {
+    margin-top: 8px;
+    margin-left: 10px;
+    position: absolute;
+    bottom: 2px;
 }
 
 .progress #time {
     width: 100%;
+    position: absolute;
+    height: 8px;
+    border-radius: 5px;
+    background-color: #E8E8E8;
 }
 
-.timeProgressWrapper {
+.progress_fg {
+    height: 8px;
+    border-radius: 5px 0px 0px 5px;
+    background-color: #319AB7;
+    position: relative;
+}
+.ord_items{
+    display: flex;
+    justify-content: space-between;
+}
+.time_progress {
     margin-top: 18px;
 }
 
-.progressWrapper {
-    padding-left: 40px;
+._progress {
+    padding-left: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: -8px;
 }
 
-.profitLossWrapper {
+.profit_loss {
     display: flex;
     justify-content: start;
     /* margin: 20px 10%; */
-    margin: 20px 31px;
+    margin: 0 31px;
     flex-wrap: wrap;
     text-align: center;
 }
-.plWrapper{
+
+.pl_progress {
     display: flex;
+    padding: 0;
 }
 
-.plHeader {
+.pl_progress>div {
+    margin-left: 30px;
+}
+
+.pl_header {
     font-weight: bold;
     font-size: 15px;
     /* text-align: center; */
 }
 
-.profitLossWrapper>div {
+.profit_loss>div {
     /* width: 165px; */
     border-right: 1px solid rgba(0, 0, 0, .1);
     padding-right: 15px;
@@ -343,42 +402,55 @@ td p {
     width: 170px;
 }
 
-.profitLossWrapper>div:last-child {
+.profit_loss>div:last-child {
     border-right: none
 }
 
 #profitLoss {
     width: 135px;
-    color: green;
+    left: 0;
+    background-color: green;
+    position: absolute;
+    height: 8px;
+    border-radius: 5px;
+    background-color: #E8E8E8;
 }
+
+#profitLoss .progress_fg {
+    background-color: green;
+}
+
 
 .bld {
     font-weight: bold;
     font-size: 22px;
 }
 
-.plWrapper p {
+.pl_progress p {
     margin-bottom: 5px;
 }
 
-.plWrapper {
-    /* text-align: center; */
-    margin: auto;
+
+.pl_progress .progress {
+    width: 135px;
+    height: 18px;
 }
 
-.plAmt {
+.pl_amt {
     font-size: 18px;
     font-weight: bold;
     color: green;
 }
 
-.goalAmt {
+.goal_amt {
     font-size: 14px;
     font-weight: bold;
 }
 
-.remainTime {
-    margin-bottom: 5px;
+.remain_time {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
 }
 
 .sideicons img {
@@ -407,11 +479,12 @@ td p {
     border-right: 1px solid black;
 }
 
-.progressWrapperParent {
+.progress_parent {
     display: flex;
-    align-items: end;
-    margin: 0 auto;
+    align-items: center;
+    /* margin: 0 auto; */
 }
+
 /* table{
     display: table !important;
 }
@@ -421,51 +494,126 @@ tr{
 td,th{
     display: table-cell !important;
 } */
-.itemTable th:first-child{
+.item_table th:first-child {
     text-align: left;
 }
-.itemTable tr,.orderHistory tr,.orderHistory th{
+
+.item_table tr,
+.order_history tr,
+.order_history th {
     border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
-.itemTable>table{
+
+.item_table>table {
     border-collapse: collapse;
 }
-.itemTable table tbody tr:last-child{
+
+.item_table table tbody tr:last-child {
     border-bottom: none;
     font-weight: bold;
 }
-.itemTable table tr:last-child td:first-child{
-   text-align: end;
+
+.item_table table tr:last-child td:first-child {
+    text-align: end;
 }
-.progress{
+
+.progress {
     position: relative;
 }
 
+.ord_history_list {
+    margin: 0;
+    padding: 0;
+    height: 92px;
+    overflow-y: auto;
+}
+
+.ord_heading {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    font-weight: bold;
+}
+
+.ord_history_list div {
+    margin: 8px 0;
+}
+
+.item_table tr:last-child td {
+    padding: 9px 10px !important;
+}
+
+/* For Firefox */
+progress::-moz-progress-bar {
+    background: green;
+}
+
+/* For Chrome or Safari */
+progress::-webkit-progress-value {
+    background: green;
+}
+
+/* For IE10 */
+progress {
+    background: green;
+}
+
+.remain_time img {
+    width: 20px;
+    margin-right: 5px;
+}
+
 @media screen and (max-width: 991px) {
-    .placeOrderWrapper {
+    .place_order_wrapper {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
     }
-    .progressWrapperParent{
+
+    .progress_parent {
         margin-top: 25px;
     }
-    .profitLossWrapper{
+
+    .profit_loss {
         margin: 20px 5%;
+        justify-content: center;
     }
-    .progressWrapper{
+
+    ._progress {
         padding-left: 0;
     }
-    .profitLossWrapper>div{
+
+    .profit_loss>div {
         margin-top: 15px;
     }
-    .placeOrder{
+
+    .place_order {
         width: 490px;
     }
-    .placeOrderWrapper>div:first-child{
+
+    .place_order_wrapper>div:first-child {
         overflow-x: auto;
     }
 }
-@media screen and (max-width: 913px) {
-    
+
+@media screen and (max-width: 900px) {
+    .place_order_wrapper>div:first-child {
+        padding-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 1195px) {
+    .profit_loss {
+        justify-content: center;
+    }
+}
+
+
+
+.progress_fg:before {
+    content: ' ';
+    position: absolute;
+    right: -2px;
+    top: -6px;
+    width: 2px;
+    height: 20px;
+    background-color: #000;
 }
