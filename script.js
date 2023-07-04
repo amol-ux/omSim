@@ -98,6 +98,86 @@ function loadChart(series){
 
 document.addEventListener("DOMContentLoaded", function () {
     loadChart();
+    Highcharts.chart("container1", {
+        chart: {
+          type: "column",
+          marginTop: 70,
+          plotBorderWidth: 2,
+        },
+
+        title: {
+          text: "<span x=400>Units left: 382</span> <span x=790>Demand: 37</span>",
+          // fontSize: 20,
+          verticalAlign: 'top',
+          align: 'center',
+          x:-300
+        },
+        
+        legend: {
+          align: "left",
+          verticalAlign: "top",
+          floating: true,
+          visible: true,
+        },
+
+        xAxis: {
+          min: 1,
+          max: 31,
+          step:1,
+          gridLineWidth: 1.5,
+          tickInterval: 1,
+          tickLength: 0,
+          // crossing: 0,
+          title: {
+            text: "Day of Month",
+            style: {
+              fontWeight: "bold",
+              fontSize: "16px",
+            },
+          },
+        },
+        yAxis: {
+          min: 0,
+          max: 1000,
+          // allowDecimals: false,
+          title: {
+            text: "Units",
+            style: {
+              fontWeight: "bold",
+              fontSize: "16px",
+            },
+          },
+          // categories: [0, 50000, 100000, 150000, 200000, 250000],
+          tickInterval: 250,
+          gridLineWidth: 0,
+          labels: {
+            formatter: function () {
+              return Highcharts.numberFormat(this.value, 0);
+            },
+          },
+        },
+          plotoptions: {
+            series: {
+              borderRadius:0,
+              // borderWidth:5,
+            },
+         
+          },
+
+        series: [
+          {
+            name: "Inventory",
+            pointWidth: 35,
+            //   lineWidth: 3,
+            data: [
+              0, 990, 958, 916, 874, 832, 790, 748, 706, 664, 622, 580, 538,
+              496, 454, 412, 370, 853, 811, 769, 727, 685, 643, 601, 559, 517,
+              475, 433, 391,
+            ],
+            color: "#579E96",
+          },
+        ],
+      });
   });
 
 $(document).on("click",".quarter",function(){
