@@ -1,5 +1,4 @@
 /* Heading Styles */
-
 h1 {
     font-size: 1.71428571rem !important;
 }
@@ -16,8 +15,7 @@ h4 {
     font-size: 1rem !important;
 }
 
-/* Header style start */
-
+/* navbar style start */
 header {
     /* box-shadow: 0px 9px 10px -15px #111; */
     box-shadow: 0px 1px 2px 0px #CCCCCC;
@@ -31,10 +29,37 @@ header .header {
     color: #012F61
 }
 
-/* Header style end */
+.sideicons img {
+    width: 20px;
+}
+
+.sideicons,
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sideicons .menuicons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menuicons>div,
+.infoicon>div {
+    padding: 2px 10px;
+}
+
+.menuicons {
+    border-right: 1px solid black;
+}
+
+
+/* navbar style end */
 
 /* main section style start */
-._header{
+._header {
     padding: 0 1rem;
     padding-top: 1rem;
 }
@@ -202,41 +227,10 @@ header .header {
 
 /* card style end */
 
-/* footer style start */
-.footer {
-    background-color: #CDCDCD;
-    font-size: 12px;
-    padding: 6px;
-    text-align: center;
-    color: #656565;
-}
+/* page2 css start */
 
-/* footer style end */
-
-
-/* media query */
-@media screen and (max-width: 768px) {
-    .cardWrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cardWrapper .ui.card {
-        margin-bottom: 15px;
-    }
-}
-
-/* @media screen and (max-width: 1200px) {
-    .keysToSucess{
-        width: 100%;
-    }
-} */
-
-
-
-/* page2 */
+/* place order table css start */
 .item_table td {
-    /* padding: 5px !important; */
     padding: 5px 10px !important;
 }
 
@@ -259,7 +253,7 @@ header .header {
     width: 60px;
     border-radius: 8px;
     color: white;
-    text-align: end;
+    text-align: center;
     border: none;
     padding: 5px;
 }
@@ -308,21 +302,10 @@ td p {
     padding: 0 8px;
 }
 
-.pause_sum_button {
-    border-radius: 30px !important;
-    padding: .58571429em 1.5em .58571429em !important;
-}
-.pause_sum{
-    background-color: #B3B3B3 !important;
-    color: #eeeeee !important;
-}
-.play_sum{
-    background-color: #B03681 !important;
-    color: white !important;
-}
-.qty{
+.qty {
     margin-left: 8px;
 }
+
 .place_order_button {
     border-radius: 30px !important;
     color: #EEEEEE !important;
@@ -339,6 +322,82 @@ td p {
     bottom: 2px;
 }
 
+.ord_items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item_table th:first-child {
+    text-align: left;
+}
+
+.item_table tr,
+.order_history tr,
+.order_history th {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.item_table>table {
+    border-collapse: collapse;
+}
+
+.item_table table tbody tr:last-child {
+    border-bottom: none;
+    font-weight: bold;
+}
+
+.item_table table tr:last-child td:first-child {
+    text-align: end;
+}
+
+.ord_history_list {
+    margin: 0;
+    padding: 0;
+    height: 92px;
+    overflow-y: auto;
+}
+
+.ord_heading {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    font-weight: bold;
+}
+
+.ord_history_list div {
+    margin: 8px 0;
+}
+
+.item_table tr:last-child td {
+    padding: 9px 10px !important;
+}
+
+/* place order table css end */
+
+/* simulation button and progress css start */
+
+.progress {
+    position: relative;
+}
+
+.progress_parent {
+    display: flex;
+    align-items: center;
+}
+
+.pause_sum_button {
+    border-radius: 30px !important;
+    padding: .58571429em 1.5em .58571429em !important;
+}
+
+.pause_sum {
+    background-color: #B3B3B3 !important;
+    color: #eeeeee !important;
+}
+
+.play_sum {
+    background-color: #B03681 !important;
+    color: white !important;
+}
+
 .progress #time {
     width: 100%;
     position: absolute;
@@ -353,12 +412,19 @@ td p {
     background-color: #319AB7;
     position: relative;
 }
-.ord_items{
-    display: flex;
-    justify-content: space-between;
-}
+
 .time_progress {
     margin-top: 18px;
+}
+
+.progress_fg:before {
+    content: ' ';
+    position: absolute;
+    right: -2px;
+    top: -6px;
+    width: 2px;
+    height: 20px;
+    background-color: #000;
 }
 
 ._progress {
@@ -369,6 +435,20 @@ td p {
     margin-top: -8px;
 }
 
+.remain_time {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.remain_time img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+/* simulation button and progress css end */
+
+/* profit loss container css start */
 .profit_loss {
     display: flex;
     justify-content: start;
@@ -420,7 +500,6 @@ td p {
     background-color: green;
 }
 
-
 .bld {
     font-weight: bold;
     font-size: 22px;
@@ -447,118 +526,32 @@ td p {
     font-weight: bold;
 }
 
-.remain_time {
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
+/* profit loss container css end */
+
+/* page2 css end */
+
+/* footer style start */
+.footer {
+    background-color: #CDCDCD;
+    font-size: 12px;
+    padding: 6px;
+    text-align: center;
+    color: #656565;
 }
 
-.sideicons img {
-    width: 20px;
-}
+/* footer style end */
 
-.sideicons,
-.nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
-.sideicons .menuicons {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
+/* media query */
+@media screen and (max-width: 768px) {
+    .cardWrapper {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.menuicons>div,
-.infoicon>div {
-    padding: 2px 10px;
-}
-
-.menuicons {
-    border-right: 1px solid black;
-}
-
-.progress_parent {
-    display: flex;
-    align-items: center;
-    /* margin: 0 auto; */
-}
-
-/* table{
-    display: table !important;
-}
-tr{
-    display: table-row !important;
-}
-td,th{
-    display: table-cell !important;
-} */
-.item_table th:first-child {
-    text-align: left;
-}
-
-.item_table tr,
-.order_history tr,
-.order_history th {
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
-}
-
-.item_table>table {
-    border-collapse: collapse;
-}
-
-.item_table table tbody tr:last-child {
-    border-bottom: none;
-    font-weight: bold;
-}
-
-.item_table table tr:last-child td:first-child {
-    text-align: end;
-}
-
-.progress {
-    position: relative;
-}
-
-.ord_history_list {
-    margin: 0;
-    padding: 0;
-    height: 92px;
-    overflow-y: auto;
-}
-
-.ord_heading {
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
-    font-weight: bold;
-}
-
-.ord_history_list div {
-    margin: 8px 0;
-}
-
-.item_table tr:last-child td {
-    padding: 9px 10px !important;
-}
-
-/* For Firefox */
-progress::-moz-progress-bar {
-    background: green;
-}
-
-/* For Chrome or Safari */
-progress::-webkit-progress-value {
-    background: green;
-}
-
-/* For IE10 */
-progress {
-    background: green;
-}
-
-.remain_time img {
-    width: 20px;
-    margin-right: 5px;
+    .cardWrapper .ui.card {
+        margin-bottom: 15px;
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -604,16 +597,4 @@ progress {
     .profit_loss {
         justify-content: center;
     }
-}
-
-
-
-.progress_fg:before {
-    content: ' ';
-    position: absolute;
-    right: -2px;
-    top: -6px;
-    width: 2px;
-    height: 20px;
-    background-color: #000;
 }
