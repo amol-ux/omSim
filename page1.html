@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="./Semantic-UI-CSS-master/semantic.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="/Semantic-UI-CSS-master/semantic.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="/script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
@@ -146,70 +147,82 @@
                                                     <span class="qty">(500000)</span>
                                                 </div>
                                             </div>
-                                            </div>
                                         </div>
-                                        <div>
-                                            <div class="place_order_btn">
-                                                <button id="placeOrderButton" class="place_order_button ui button">Place Order</button>
-                                            </div>
+                                    </div>
+                                    <div>
+                                        <div class="place_order_btn">
+                                            <button id="placeOrderButton" class="place_order_button ui button">Place
+                                                Order</button>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
-                            <div class="progress_parent">
-                                <div class="_progress">
-                                    <div class="pause_sum_btn">
-                                        <button id="pauseSumButton" class="pause_sum_button pause_sum ui button">Pause Simulation</button>
-                                    </div>
-                                    <div class="time_progress">
-                                        <div class="remain_time">
-                                            <!-- <i class="fa-light fa-clock" style="color: #666f6e;"></i> -->
-                                            <!-- <i class="fa-solid fa-clock"></i> -->
-                                            <img src="/assets/time.png" alt="">
-                                            <span>Jan 29(48 weeks remaining)</span>
-                                        </div>
-                                        <div class="progress">
-                                            <!-- <progress id="time" value="32" max="100"> 32% </progress> -->
-                                            <div class="background" id="time">
-                                                <div class="progress_fg" style="width: 20%;"></div>
-                                            </div>
 
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
                         </div>
-
-                        <div class="profit_loss">
-                            <div class="units_sold">
-                                <p class="pl_header">Total Units Sold</p>
-                                <p class="us_content bld">1,118</p>
-                            </div>
-                            <div class="tot_revenue">
-                                <p class="pl_header">Total Revenue</p>
-                                <p class="tr_content bld">$223,600</p>
-                            </div>
-                            <div class="tot_costs">
-                                <p class="pl_header">Total Costs</p>
-                                <p class="tc_content bld">$178,606</p>
-                            </div>
-                            <div class="pl_progress">
-                                <div>
-                                    <p class="pl_header">Profit/Loss</p>
-                                    <p class="pl_amt">$44,993</p>
+                        <div class="progress_parent">
+                            <div class="_progress">
+                                <div class="pause_sum_btn">
+                                    <button id="pauseSumButton" class="pause_sum_button pause_sum ui button">Pause
+                                        Simulation</button>
+                                </div>
+                                <div class="time_progress">
+                                    <div class="remain_time">
+                                        <!-- <i class="fa-light fa-clock" style="color: #666f6e;"></i> -->
+                                        <!-- <i class="fa-solid fa-clock"></i> -->
+                                        <img src="/assets/time.png" alt="">
+                                        <span>Jan 29(48 weeks remaining)</span>
+                                    </div>
                                     <div class="progress">
-                                        <!-- <progress id="profitLoss" value="32" max="100"> 32% </progress> -->
-                                        <div class="background" id="profitLoss">
+                                        <!-- <progress id="time" value="32" max="100"> 32% </progress> -->
+                                        <div class="background" id="time">
                                             <div class="progress_fg" style="width: 20%;"></div>
                                         </div>
+
                                     </div>
-                                    <p class="goal_amt">Goal: $1,000,000</p>
                                 </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="profit_loss">
+                        <div class="units_sold">
+                            <p class="pl_header">Total Units Sold</p>
+                            <p class="us_content bld">1,118</p>
+                        </div>
+                        <div class="tot_revenue">
+                            <p class="pl_header">Total Revenue</p>
+                            <p class="tr_content bld">$223,600</p>
+                        </div>
+                        <div class="tot_costs">
+                            <p class="pl_header">Total Costs</p>
+                            <p class="tc_content bld">$178,606</p>
+                        </div>
+                        <div class="pl_progress">
+                            <div>
+                                <p class="pl_header">Profit/Loss</p>
+                                <p class="pl_amt">$44,993</p>
+                                <div class="progress">
+                                    <!-- <progress id="profitLoss" value="32" max="100"> 32% </progress> -->
+                                    <div class="background" id="profitLoss">
+                                        <div class="progress_fg" style="width: 20%;"></div>
+                                    </div>
+                                </div>
+                                <p class="goal_amt">Goal: $1,000,000</p>
                             </div>
                         </div>
                     </div>
+                    <div class="graph_container">
+                        <div class="_graph">
+                            <div class="options">
+                                <div class="month" type="button">THIS MONTH</div>
+                                <div class="quarter" type="button">THIS QUARTER</div>
+                                <div class="year" type="button">YEAR-TO-DATE</div>
+                            </div>
+                            <div id="container" class="graph"></div>
+                        </div>
+                    </div>
+                </div>
 
 
             </main>

@@ -528,6 +528,50 @@ td p {
 
 /* profit loss container css end */
 
+/* graph css start */
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+.highcharts-yaxis .highcharts-axis-title{
+    font-size: 11px !important;
+}
+.options{
+    display: flex;
+    align-items: end;
+    width: 42%;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0px 2%;
+    margin-left: auto;
+    position: relative;
+    top: 35px;
+    z-index: 1;
+}
+.options>div{
+    cursor: pointer;
+}
+.graph_container{
+    width: 80%;
+    margin: auto;
+}
+._graph{
+    /* width: 78%; */
+}
+.graph{
+    /* width: 520px; */
+    height: 250px;
+}
+.highcharts-xaxis .highcharts-axis-title{
+    font-size: 12px !important;
+}
+/* graph css end */
+
 /* page2 css end */
 
 /* footer style start */
